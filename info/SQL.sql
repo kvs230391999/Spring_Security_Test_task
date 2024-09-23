@@ -1,0 +1,23 @@
+CREATE DATABASE users_db;
+
+
+CREATE TABLE IF NOT EXISTS users
+( id BIGINT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(255),
+  comment VARCHAR(255),
+  value VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
+
+CREATE TABLE IF NOT EXISTS roles
+( id BIGINT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
+
+CREATE TABLE IF NOT EXISTS users_roles
+( users_id BIGINT,
+  role_id BIGINT
+);
